@@ -54,7 +54,6 @@ function OAuth2Error (error, description, err) {
       this.code = 400;
       break;
     case 'invalid_token':
-      this.headers['WWW-Authenticate'] = 'Bearer realm="Service"';
       this.code = 401;
       break;
     case 'server_error':
